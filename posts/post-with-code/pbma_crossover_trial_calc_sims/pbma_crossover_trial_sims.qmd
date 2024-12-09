@@ -1,0 +1,260 @@
+---
+title: "Plant Based Meat Alternative Simulations"
+author: "Makarand Nadendla"
+format: html
+editor: visual
+date: "2024-12-5"
+categories: [news, code, analysis]
+image: "image.jpg"
+---
+
+Let's take a minute to create some simulations for our plant based meat trial simulations. Here are some initial considerations I have received.
+
+# Study Design and Methodology
+
+## 1. Define Parameters
+
+-   **Effect Size (d):**\
+    Based on literature or pilot studies, determine the baseline ApoB levels and standard deviation (SD).\
+    Example: Assume an SD of (0.25g/L - 0.35g/L) for ApoB.
+
+-   **Expected Mean Difference:**\
+    5% difference in ApoB concentration (e.g., 0.05 g/L difference if mean ApoB is 1.0 g/L).
+
+-   **Significance Level (α):**\
+    Typically 0.05 for a two-sided test.
+
+-   **Power (1 - β):**\
+    Typically 80% or 90%.
+
+```{r}
+# ApoB
+mean_diff <- 0.05
+mu <- 1.0
+sd <- 0.25 #0.35
+alpha <- 0.05
+power <- 0.9
+```
+
+## 2. Calculate Effect Size
+
+-   **Effect Size (Cohen’s d):**\
+    \[ d = \frac{\text{Mean Difference}}{\text{SD}} = \frac{0.05}{0.1} = 0.5 \]
+
+## 3. Determine Sample Size
+
+Using standard sample size tables or software:
+
+-   For a crossover design with:
+    -   Effect size ( d = 0.5 )
+    -   ( \alpha = 0.05 )
+    -   80% power\
+        Approximately **34 participants** may be needed.
+
+```{r}
+n = 42
+```
+
+-   **Adjust for Dropout Rate:**\
+    Assuming \~20% dropout rate (Will this hold if we have a 3 month:\
+    **Final Sample Size Requirement:** \~42 participants.
+
+------------------------------------------------------------------------
+
+## Inclusion and Exclusion Criteria
+
+### Inclusion Criteria:
+
+-   Age ≥18 years, generally healthy, omnivorous adults.
+-   Consuming ≥1 serving of meat daily.
+-   Willingness to consume both plant and animal meats (\~2 servings/day of either).
+-   LDL-C ≥3.40 mmol/L.
+
+### Exclusion Criteria:
+
+-   Weight \<110 lbs, BMI \>40.
+-   LDL-C \<3.39 mmol/L.
+-   Blood pressure issues or significant health conditions.
+    -   What level of hypertension should we cut off at? List out specific health conditions.
+-   Recent use of specific medications or supplements.
+    -   Anything that would clinically significantly lower lipids
+-   Pregnancy or breastfeeding.
+-   Wheat allergy or celiac disease.
+
+------------------------------------------------------------------------
+
+## Randomization
+
+-   Random assignment to each sequence of interventions. (I'm thinking permuted block design)
+
+------------------------------------------------------------------------
+
+## Data Collection
+
+-   **Baseline Measurements:**\
+    ApoB, LDL-C, total cholesterol, CRP, triglycerides.
+
+-   **Post-Intervention Measurements:**\
+    Collect after each intervention and after each washout period.
+
+------------------------------------------------------------------------
+
+## Each Patient will go through Three Arms
+
+Described for 12 servings per week.
+
+1 arm: 2 servings of Pea-Based (Beyond) -\> Baseline Diet (P -\> B)
+
+1 arm: 2 servings of Seitan (Field Roast) -\> Baseline Diet (S -\> B)
+
+1 arm: 2 servings Meat-Based (Grass-Fed Organic) -\> Baseline Diet (M -\> B)
+
+PB -\> BP -\> SB -\> BS -\> MB -\> BM
+
+Number of measurements:
+
+1 at beginning right before intervention, 1 in middle of intervention (2 weeks in), 1 at end of intervention (right before washout), 1 right before control (right after washout), 1 in the middle of control (2 weeks in), and 1 at the end of control
+
+### Questions
+
+### 1) Is dropout justified for 20% with 4 week washout period for a total trial length of 3 months
+
+2\) Maximum sample size that we can possibly and reasonably get
+
+3\) Can we get sources for the SD of (0.25g/L - 0.35g/L) for ApoB?
+
+4\) In exclusion criteria, expand on what specific blood pressure issues or significant health conditions.
+
+-   What level of hypertension should we cut off at? List out specific health conditions.
+
+<!-- -->
+
+-   And what specific medications or supplements?
+    -   Probably anything that would clinically significantly lower lipids.
+
+5\) The number of servings per week has been described as 12 servings per week with (2 servings per day of the intervention)
+
+-   Does this mean we're going to give 1 day's worth of leeway to our study participants?
+
+-   Even if we expect attrition, would there still be value in providing all 14 servings to each participant?
+
+6\) Number of measurements:
+
+1 at beginning right before intervention, 1 in middle of intervention (2 weeks in), 1 at end of intervention (right before washout), 1 right before control (right after washout), 1 in the middle of control (2 weeks in), and 1 at the end of control
+
+-   Will it be feasible to get measurements in the middle of each of the intervention and control arms, or will funding get in the way of that?
+
+## So let's set up the crossover trial
+
+We will set up a crossover trial with 3 arms. Each Partie
+
+x1 = mu + crossover_period + treatment_diff + patient_eff + epsilon
+
+-   ***Global Mean***
+
+    -   3.39 (Corresponds to LDL of 100)
+
+<!-- -->
+
+-   ***Mean Treatment Effect***
+
+    -   Pea Protein Group: Normal(-0.05, 0.01)
+
+    -   Seitan Group: Normal(-0.05, 0.01)
+
+    -   Meat Group: Normal(0.02, 0.01)
+
+-   ***Period Effects (TODO - Find out what crossover effects are reasonable for this particular scenario)***
+
+    -   Normal (0, 0.01)
+
+-   \*\*\*Crossover Effects\*\*\*
+
+    -   Normal (0,0.01)
+
+-   ***Patient Effect (TODO)***
+
+    -   Normal (0.00, 0.01)
+
+-   ***Episilon (TODO)***
+
+    -   Normal (0.00, 0.01)
+
+        \
+        We'll first model the specific ones that won't change from period to period:
+
+```{r}
+global_mean = 3.39
+patient_eff <- rnorm(n, 0, sd = 0.1)
+epsilon <- rnorm(n, 0, sd = 0.03)
+
+patient_stable_to_period_val = global_mean + patient_eff + epsilon
+```
+
+Now let's create each of them for the following periods
+
+PB
+
+```{r}
+pea_protein_treatment_effect = rnorm(n,-0.05,0.01)
+period_eff = rnorm(n, 0.00, 0.01)
+
+pb_p = patient_stable_to_period_val + period_eff + pea_protein_treatment_effect 
+pb_b = patient_stable_to_period_val + period_eff + carryover  
+```
+
+BP
+
+```{r}
+pea_protein_treatment_effect = rnorm(n,-0.05,0.01)
+period_eff = rnorm(n, 0.00, 0.01)
+
+pb_p = patient_stable_to_period_val + period_eff + pea_protein_treatment_effect 
+pb_b = patient_stable_to_period_val + period_eff + carryover  
+```
+
+SB
+
+```{r}
+pea_protein_treatment_effect = rnorm(n,-0.05,0.01)
+period_eff = rnorm(n, 0.00, 0.01)
+
+pb_p = patient_stable_to_period_val + period_eff + pea_protein_treatment_effect 
+pb_b = patient_stable_to_period_val + period_eff + carryover  
+```
+
+BS
+
+```{r}
+pea_protein_treatment_effect = rnorm(n,-0.05,0.01)
+period_eff = rnorm(n, 0.00, 0.01)
+
+pb_p = patient_stable_to_period_val + period_eff + pea_protein_treatment_effect 
+pb_b = patient_stable_to_period_val + period_eff + carryover  
+```
+
+MB
+
+```{r}
+pea_protein_treatment_effect = rnorm(n,-0.05,0.01)
+period_eff = rnorm(n, 0.00, 0.01)
+
+pb_p = patient_stable_to_period_val + period_eff + pea_protein_treatment_effect 
+pb_b = patient_stable_to_period_val + period_eff + carryover  
+```
+
+BM
+
+```{r}
+pea_protein_treatment_effect = rnorm(n,-0.05,0.01)
+period_eff = rnorm(n, 0.00, 0.01)
+
+pb_p = patient_stable_to_period_val + period_eff + pea_protein_treatment_effect 
+pb_b = patient_stable_to_period_val + period_eff + carryover  
+```
+
+```{r}
+#x2 = mu + crossover_period + mean_diff + patient_eff + epsilon
+
+
+```
