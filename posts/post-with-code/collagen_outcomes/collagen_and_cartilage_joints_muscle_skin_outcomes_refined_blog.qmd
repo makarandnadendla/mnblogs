@@ -27,12 +27,12 @@ Going in, I had a few important considerations for any trial evaluating collagen
 
 -   [ ] Either the collagen is a standalone intervention and compared to a placebo that’s isonitrogenic, or have the treatment assignments be something like the following:
 
-| Treatment           | Control               |
-|---------------------|-----------------------|
+| Treatment | Control |
+|----|----|
 | Hydrolyzed Collagen | Isonitrogenic Placebo |
-| Hyaluronic Acid     | Hyaluronic Acid       |
-| Glucosamine         | Glucosamine           |
-| Condroiton          | Condroiton            |
+| Hyaluronic Acid + Collagen Derivative | Hyaluronic Acid + Isonitrogenic Placebo |
+| Glucosamine + Collagen Derivative | Glucosamine + Isonitrogenic Placebo |
+| Condroiton + Collagen Derivative | Condroiton + Isonitrogenic Placebo |
 
 Where the only difference between treatment and control is the collagen supplement, but some standard of care treatment is included.
 

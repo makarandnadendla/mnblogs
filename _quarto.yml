@@ -1,9 +1,8 @@
 project:
   type: website
   output-dir: docs
-
 website:
-  title: "Makarand Nadendla, Causality God"
+  title: "Makarand Nadendla"
   navbar:
     right:
       - about.qmd
@@ -13,7 +12,9 @@ website:
         href: https://twitter.com/TheChosenMach
 format:
   html:
-    theme: cosmo
+    theme: 
+      light: minty
+      dark: solar
     css: styles.css
 
 editor: visual
