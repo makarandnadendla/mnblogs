@@ -1,6 +1,6 @@
 ---
 title: "About"
-image: 02182026_mach_jawline.jpg
+image: profile.jpg
 about:
   template: jolla
   links:
