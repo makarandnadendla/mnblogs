@@ -8,6 +8,8 @@ website:
       - about.qmd
       - icon: github
         href: https://github.com/makarandnadendla
+      - icon: linkedin
+        href: https://www.linkedin.com/in/makarand-nadendlaa-6b19b150/
       - icon: twitter
         href: https://twitter.com/TheChosenMach
 format:
