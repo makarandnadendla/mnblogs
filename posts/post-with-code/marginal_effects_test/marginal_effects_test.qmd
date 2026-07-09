@@ -1,0 +1,32 @@
+---
+draft: true
+engine: markdown
+---
+
+I'm just using this to test some of the features of marginal effects. Let's do this by importing some data:
+
+```{r}
+pacman::p_load(marginaleffects,ggeffects,tidyverse, skimr)
+```
+
+```{r}
+data(efc, package = "ggeffects")
+efc$c172code <- datawizard::to_factor(efc$c172code)
+```
+
+```{r}
+efc <- efc %>% mutate(barthtot_dichot = if_else(barthtot > median(efc$barthtot, na.rm=TRUE),1,0))
+```
+
+```{r}
+fit <- glm(c175empl ~ c12hour + neg_c_7 + c172code, data = efc, family = "binomial")
+dat <- predict_response(fit, terms = c("c12hour [all]", "c172code"))
+plot(dat, facets = TRUE, show_data = TRUE)
+```
+
+```{r}
+#make a regression on barthot using c12hour and c172code
+fit <- glm(barthtot ~ c12hour + neg_c_7 +c172code, data = efc, family = "gaussian")
+dat <- predict_response(fit, terms = c("c12hour", "c172code"))
+plot(dat, facets = TRUE, show_data = TRUE)
+```

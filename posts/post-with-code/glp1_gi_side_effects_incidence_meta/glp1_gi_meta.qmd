@@ -1,0 +1,78 @@
+---
+draft: true
+engine: markdown
+title: "glp1_gi_meta"
+format: html
+---
+
+Let's load in the data!
+
+```{r}
+library(here)
+library(tidyverse)
+library(meta)
+
+glp_raw_dat <- read_csv(here("posts","post-with-code","glp1_gi_side_effects_incidence_meta","glp_1_gastro_side_effects_meta_analysis_data.csv"))
+font_add_google("Manrope", "mrope")
+
+
+showtext_auto()
+```
+
+Let's visualize before doing the meta analysis!\
+\
+Let's perform the meta analysis and obtain the forest plot!
+
+```{r}
+# Forest Plot Calculations
+
+#subgroup_glp_dat <- glp_dat %>% mutate(subgroup_div = if_else(prevalence_2020 < 8.1, "Strongyloides Prevalence Below #Global Average (<8.1%)", "Strongyloides Prevalence Above Global Average (>8.1%)"))
+m.p <- metaprop(event = num_events_treatment, n = n_treatment, 
+               data = glp_raw_dat, fixed = FALSE, studlab = study_name, 
+               random = TRUE,
+               method = "GLMM", 
+               subgroup = gastro_side_effect_type, 
+               tau.common = TRUE,
+               sm = "PLOGIT", title = "glp Treatment: ACM (RR) subgrouped on Strongyloides Prevalence",
+               method.random.ci = "HK")
+
+
+# Forest Plot JAMA Style (Figure 2)
+
+#pdf(file = "glpmeta_forestplot_jama.pdf", width = 8, height = 7)
+png(file = "glp_meta_forestplot_jama.png", width = 3000, height = 1500, res = 300)
+
+forest.meta(m.b, layout = "JAMA", leftcols = c("studlab", "event.e", "n.e", "event.c", "n.c", "effect", "ci") ,pooled.events
+= TRUE,pooled.totals = TRUE, sortvar = yi ,subgroup.name = "")
+#grid.text("glp Treatment: All-Cause Mortality subgrouped on Strongyloides Prevalence", .5, .822, gp=gpar(cex=1.4))
+
+dev.off()
+
+```
+
+Let's perform the funnel plot!
+
+```{r}
+# Publication Bias
+
+# Funnel Plot
+col.contour = c("gray95", "gray85", "gray75")
+ 
+png(file = "glp_meta_funnelplot.png", width = 3200, height = 1900, res = 300)
+
+funnel.meta(m.p,
+            studlab = TRUE,
+            #contour = c(0.9, 0.95, 0.99),
+            #col.contour = col.contour,
+            cex.studlab = 0.6, pos.studlab = 3)
+
+#legend(x = 1.6, y = 0.01, 
+#       legend = c("p < 0.1", "p < 0.05", "p < 0.01"),
+#       fill = col.contour)
+
+# Add title
+title("Funnel Plot (glp Treatment)")
+
+dev.off()
+
+```

@@ -1,0 +1,87 @@
+---
+draft: true
+engine: markdown
+title: "CountCarryVignette"
+format: html
+editor: visual
+---
+
+```{r}
+library(CrossCarry)
+library(skimr)
+```
+
+```{r}
+data(Arterial)
+
+carryover <- createCarry(data = Arterial, treatment = "Treatment", id = "Subject", period = "Period", carrySimple = TRUE)
+```
+
+```{r}
+library(skimr)
+skimr::skim(carryover)
+head(carryover)
+```
+
+Let's see ere
+
+```{r}
+
+ArterialGEE <- CrossGEE(response = "Pressure", treatment = "Treatment", period = "Period", id="Subject", carry=carryover$carryover, data=carryover$data, correlation = "exchangeable", covar="Time", family=gaussian())
+
+ArterialGEEmodelSummary<-summary(ArterialGEE$model)
+ArterialGEEmodelSummary$coefficients
+    
+alpha <- 0.05
+simIterId <- 32
+
+confint <- ArterialGEEmodelSummary$coefficients[, 1] #+ c(-1, 1) * qnorm(1 - alpha / 2) * ArterialGEEmodelSummary$coefficients[, 4]
+
+quantityBeingEstimated <- attributes(ArterialGEEmodelSummary$coefficients)$dimnames[[1]]
+
+effects <- list(TreatmentB = list(label = "P", mean = -0.5, SD = 0.1), meat = list(label = "M", mean = 1.3, SD = 0.1), seitan = list(label = "S", mean = -0.9, SD = 0.1), baseline = list(label = "B", mean = 0, SD = 0.0000000000000001))
+popMean = list(mean = 3.39, SD = 0.25) 
+patientEff <- list(mean = 0, SD = 0.1)
+epsilon <- list(mean = 0, SD = 0.03)
+periodEff <- list(mean = 0, SD = 0.1)
+
+effects[["popMean"]] <- popMean
+effects[["patientEff"]] <- patientEff
+effects[["episilon"]] <- epsilon
+effects[["periodEff"]] <- periodEff
+
+
+
+simIterResults <- tibble::as_tibble(ArterialGEEmodelSummary$coefficients) |>
+  dplyr::rename_with(~ gsub(" ", "_", .x)) |> dplyr::rename_with(~ gsub("\\.", "", .x)) |> 
+  dplyr::mutate(class = quantityBeingEstimated) |>
+  dplyr::mutate(effectClass = dplyr::case_when(
+      class == "(Intercept)"      ~ "popMean",
+      stringr::str_detect(class, "^Period") ~ "treatment",
+      stringr::str_detect(class, "^Treatment") ~ "treatment",
+      stringr::str_detect(class, "^Carry")   ~ "carry",
+      TRUE ~ NA_character_
+    ),
+    effectType = dplyr::case_when(
+      stringr::str_detect(class, "^Period")     ~ stringr::str_extract(class, "\\d+"),
+      stringr::str_detect(class, "^Treatment")  ~ stringr::str_extract(class, "[A-Z]$"),
+      stringr::str_detect(class, "^Carry")      ~ stringr::str_extract(class, "[A-Z]$"),
+      TRUE ~ NA_character_)) |> #effectClass = gsub("_", "", quantityBeingEstimated)) |>
+  dplyr::mutate(
+        nthsim = simIterID,
+        lower = Estimate - qnorm(1 - alpha / 2)*Robust_SE,
+        upper = Estimate + qnorm(1 - alpha / 2)*Robust_SE) |> 
+  dplyr::mutate(
+       # pValue = CrossGEEsimSummary$coefficients[treatment, 4],
+        #rejectedOrNot = ifelse(ArterialGEEmodelSummary$coefficients < alpha, TRUE, FALSE),
+        coverage = dplyr::between(effects[[name]][["mean"]], lower, upper),
+        aPrioriTreatmentEffectForCoveragePurposes = effects[[name]][["mean"]]
+        )
+coefTib
+```
+
+\#
+
+```{r}
+model
+```

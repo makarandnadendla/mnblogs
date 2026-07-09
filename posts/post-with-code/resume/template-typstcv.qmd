@@ -1,0 +1,92 @@
+---
+draft: true
+title: "Makarand Nadendla's CV"
+author:
+  firstname: Makarand
+  lastname: Nadendla
+  position: "Data Scientist - Causal Inference"
+  contacts:
+    - icon: fa envelope
+      text: ae@example.com
+      url: "makarand.nadendla@gmail.com"
+    - icon: fa brands github
+      text: GitHub
+      url: https://github.com/makarandnadendla
+    - icon: fa brands linkedim
+      text: LinkedIn
+      url: https://www.linkedin.com/in/makarand-nadendlaa-6b19b150/
+format: awesomecv-typst
+execute:
+  echo: false
+  warning: false
+  message: false
+brand:
+  typography: 
+    fonts:
+      - family: Roboto
+        source: google
+        weight: [100, 400, 700]
+      - family: Source Sans 3
+        source: google
+        weight: [100, 400, 700]
+        style: [normal, italic]
+    base: Source Sans 3
+  color:
+    primary: "#dc3522"
+    link: "#771822"
+  defaults: 
+    awesomecv-typst:
+      font-header: Roboto
+---
+
+```{r}
+# install.packages("typstcv", repos = "https://kazuyanagimoto.r-universe.dev")
+library(typstcv)
+library(dplyr)
+library(lubridate)
+```
+
+```{r}
+educ <- read.csv("assets/csv/educ.csv")
+work <- read.csv("assets/csv/work.csv")
+pub <- read.csv("assets/csv/pub.csv")
+skill <- read.csv("assets/csv/skill.csv")
+```
+
+## Education
+
+```{r}
+#| output: asis
+
+resume_entry(educ)
+```
+
+
+## Publications
+
+```{=typst}
+#resume-entry(title: link("https://jamanetwork.com/journals/jamanetworkopen/fullarticle/2790173")[Meta Analysis: Strongyloides Prevalence's influence on Ivermectin for COVID-19],location: [ JAMA],date: [ March 2022],)
+```
+
+## Work Experience
+
+```{r}
+#| output: asis
+work |> mutate(across(c(start,end), ymd))  |>
+  format_date(end = "end", date_format = "%Y", sort_by = "start") |>
+  resume_entry(details = c("detail1", "detail2", "detail3","detail4"))
+```
+
+```{r}
+#| output: asis
+#resume_entry(award, details = c("detail1", "detail2"))
+#resume_entry(award, details = grep("^detail", names(award)))
+```
+
+## Skills
+
+```{r}
+#| output: asis
+# str(skill)
+resume_entry(skill)
+```

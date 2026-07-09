@@ -21,11 +21,11 @@ Though I still felt quite indifferent towards the product, it pushed me just eno
 \
 Going in, I had a few important considerations for any trial evaluating collagen that I wanted to see fulfilled:
 
--   [ ] Assessment and control for protein intake at baseline for all groups (especially in older adults). You would get many bonus points if you ensured an slightly higher protein intake of at least 1.2g/kg lean mass in an isonitrogenic fashion between control and treatment arms. Given that collagen obviously contributes to our amino acid pool when it’s digested, and the generally well known benefits on sufficient total protein intake for bone, muscle, and connective tissue health, this seemed like a very important consideration to me. 
+- [ ] Assessment and control for protein intake at baseline for all groups (especially in older adults). You would get many bonus points if you ensured an slightly higher protein intake of at least 1.2g/kg lean mass in an isonitrogenic fashion between control and treatment arms. Given that collagen obviously contributes to our amino acid pool when it’s digested, and the generally well known benefits on sufficient total protein intake for bone, muscle, and connective tissue health, this seemed like a very important consideration to me. 
 
--   [ ] Consistent dosages of the same molecules and consistent length of supplementation. This allows for a better understanding of what dose, collagen type, and exposure time length we can obtain benefits from if they are to be had.
+- [ ] Consistent dosages of the same molecules and consistent length of supplementation. This allows for a better understanding of what dose, collagen type, and exposure time length we can obtain benefits from if they are to be had.
 
--   [ ] Either the collagen is a standalone intervention and compared to a placebo that’s isonitrogenic, or have the treatment assignments be something like the following:
+- [ ] Either the collagen is a standalone intervention and compared to a placebo that’s isonitrogenic, or have the treatment assignments be something like the following:
 
 | Treatment | Control |
 |----|----|
@@ -42,19 +42,19 @@ With those ground rules set, I'd like to present my synthesis on collagen's outc
 
 [2024 Meta Analysis/Systematic Review looking at a variety of outcome](https://link.springer.com/article/10.1007/s40279-024-02079-0)
 
--   “Aims to investigate the effects of long-term daily collagen peptide (CP) supplementation on strength, musculotendinous adaptation, functional recovery, and body composition in healthy adults”.
+- “Aims to investigate the effects of long-term daily collagen peptide (CP) supplementation on strength, musculotendinous adaptation, functional recovery, and body composition in healthy adults”.
 
--   Looked at outcomes measuring fat-free mass, tendon morphology, muscle mass, maximal strength, and recovery in reactive strength following exercise-induced muscle damage.
+- Looked at outcomes measuring fat-free mass, tendon morphology, muscle mass, maximal strength, and recovery in reactive strength following exercise-induced muscle damage.
 
--   PRISMA chart shows 19 studies that were included with over 768 total participants
+- PRISMA chart shows 19 studies that were included with over 768 total participants
 
--   The meta analysis authors used Standardized Mean Difference as the outcome measure. I maintain that most meta analyses nowadays shouldn’t be using it unless they can give a clear definition of the underlying construct that they’re trying to measure. The definition of the estimand for the meta analyses, is what leads to clear definitions of the construct used for the SMD. it’s a vital part of the process that most meta analyses using SMD don’t seem to do for whatever reason. SMD has almost no proper use case for a meta analysis these days and should only be used by a very very very experienced practitioner
+- The meta analysis authors used Standardized Mean Difference as the outcome measure. I maintain that most meta analyses nowadays shouldn’t be using it unless they can give a clear definition of the underlying construct that they’re trying to measure. The definition of the estimand for the meta analyses, is what leads to clear definitions of the construct used for the SMD. it’s a vital part of the process that most meta analyses using SMD don’t seem to do for whatever reason. SMD has almost no proper use case for a meta analysis these days and should only be used by a very very very experienced practitioner
 
--   Why is the second criteria of the meta analyses inclusion criteria that “they used different forms of DC (dietary collagen)”? If they simply mean using a variety of collagen molecules but in similar proportions and dosages across studies, I have no problem. But I’m not sure based on the wording here.(To be fair, many of the trials stuck to 15g daily DC supplementation). 
+- Why is the second criteria of the meta analyses inclusion criteria that “they used different forms of DC (dietary collagen)”? If they simply mean using a variety of collagen molecules but in similar proportions and dosages across studies, I have no problem. But I’m not sure based on the wording here.(To be fair, many of the trials stuck to 15g daily DC supplementation). 
 
--   If I’m not mistaken, literally only one trial provided a protein matched placebo. Only ONE!!!!! The rest were some combination of maltodextrin, dextrose, or some random white powder that mixes similar to collagen in water.
+- If I’m not mistaken, literally only one trial provided a protein matched placebo. Only ONE!!!!! The rest were some combination of maltodextrin, dextrose, or some random white powder that mixes similar to collagen in water.
 
--   They keep stacking people from the same study multiple times into the same forest plot. Wtf why??? Just make different subgroup analyses! THIS MAKES THE EFFECT MEASURE UNINTERPRETABLE. Not that SMD in this context wasn’t borderline uninterpretable from the start. Case in point:
+- They keep stacking people from the same study multiple times into the same forest plot. Wtf why??? Just make different subgroup analyses! THIS MAKES THE EFFECT MEASURE UNINTERPRETABLE. Not that SMD in this context wasn’t borderline uninterpretable from the start. Case in point:
 
 \- ![](images/muscle_meta_analysis_1.png)
 
@@ -66,73 +66,73 @@ For fun, I tried to see if I can even replicate the above forest plot with the d
 
 [Supplemental Collagen Meta Analysis Done for osteoarthritis outcomes (using the VAS as the main outcome)](https://link.springer.com/epdf/10.1007/s00264-021-05239-3?sharing_token=nZQH2bjn8aRXz2kjvgXdSPe4RwlQNchNByi7wbcMAY7YkNDWBxBnTEnalNaIMriEIQ-pN-PQiuDpXtYmMoYH80QT-utrlaH0mkJ8Ts3rC6AtDefWZTW_Gc17Eim_ydFe6GmJySmqrGTOQU5TgvYTB_OBtiQzd_lnhpMUbs9HeOM%3D) 
 
--   Meta analysis of 6 studies with over 300 patients.
+- Meta analysis of 6 studies with over 300 patients.
 
--   I wanted to note this letter because the author succinctly commentates on some of the issues I’m observing with this literature.
+- I wanted to note this letter because the author succinctly commentates on some of the issues I’m observing with this literature.
 
--   To the author's point about financial biases: Unlike him, I want to note I personally don’t really care about who funded a study. As long as the results are analytically valid and study design is sound I have no problems who funded it, as they’d be valid independent of funding. Typically if there are nefarious things at play from the financial bias of the funders then they show up in study design, methods, and interpretations and you can criticize the study on the merit of those
+- To the author's point about financial biases: Unlike him, I want to note I personally don’t really care about who funded a study. As long as the results are analytically valid and study design is sound I have no problems who funded it, as they’d be valid independent of funding. Typically if there are nefarious things at play from the financial bias of the funders then they show up in study design, methods, and interpretations and you can criticize the study on the merit of those
 
--   The author notes problems in this meta analysis around inconsistent dosage, effect sizes, possible publication bias,length of usage and actual clinical significance which are all very very fair criticisms and ones I agree with. This is unfortunately a theme we’ll see going throughout today….. 
+- The author notes problems in this meta analysis around inconsistent dosage, effect sizes, possible publication bias,length of usage and actual clinical significance which are all very very fair criticisms and ones I agree with. This is unfortunately a theme we’ll see going throughout today….. 
 
 We do happen to have a couple of broad Systematic Reviews on the topic of supplementary collagen for cartilages, joints and muscles! Great!! Let’s read further…..
 
 [Role of Collagen Derivatives in Osteoarthritis and Cartilage Repair: A Systematic Scoping Review With Evidence Mapping](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7695755/)
 
--   41 published studies were ultimately included in the review, 16 of which were preclinical studies and 25 were clinical studies (including four systematic reviews/meta-analyses)
+- 41 published studies were ultimately included in the review, 16 of which were preclinical studies and 25 were clinical studies (including four systematic reviews/meta-analyses)
 
--   Oh dear god, these didn't list baseline protein intakes of people in the study in the review (making me have to go through each trial to find if they did) 
+- Oh dear god, these didn't list baseline protein intakes of people in the study in the review (making me have to go through each trial to find if they did) 
 
-    -   Therefore I hate my life and these researchers I hate even more 
+  - Therefore I hate my life and these researchers I hate even more 
 
--   At a glance, wildly varying doses of collagen, different molecular weights, whether it's hydrolyzed, varying trial lengths. This is a red flag.
+- At a glance, wildly varying doses of collagen, different molecular weights, whether it's hydrolyzed, varying trial lengths. This is a red flag.
 
--   Also for some reason smaller studies seem to consistently show higher effect sizes than larger ones. This is also another red flag.
+- Also for some reason smaller studies seem to consistently show higher effect sizes than larger ones. This is also another red flag.
 
--   We'll end up diving into some of the issues these individual studies had in the next section. The errors found in those individual studies are broadly representative of the problems the rest of them in this review have. I've definitely come to a different conclusion about collagen than these authors.
+- We'll end up diving into some of the issues these individual studies had in the next section. The errors found in those individual studies are broadly representative of the problems the rest of them in this review have. I've definitely come to a different conclusion about collagen than these authors.
 
 [The effects of collagen peptide supplementation on body composition, collagen synthesis, and recovery from joint injury and exercise: a systematic review](https://link.springer.com/article/10.1007/s00726-021-03072-x)
 
--   Only two studies had a placebo that matched total protein in the placebo. Again…..why would you do something like this?
+- Only two studies had a placebo that matched total protein in the placebo. Again…..why would you do something like this?
 
--   And both of those that did have a comparable protein placebo they measured the surrogate outcome MPS, instead of hard outcomes like body composition or joint pain, cartilage size/thickness, etc. So there's no real conclusion on hard outcomes to be made here.
+- And both of those that did have a comparable protein placebo they measured the surrogate outcome MPS, instead of hard outcomes like body composition or joint pain, cartilage size/thickness, etc. So there's no real conclusion on hard outcomes to be made here.
 
--   Do I even want to bother with looking at the randomization + power analyses for both of these….I know I’m not going to be happy at a glance. Let’s spare myself the mental burden
+- Do I even want to bother with looking at the randomization + power analyses for both of these….I know I’m not going to be happy at a glance. Let’s spare myself the mental burden
 
--   Here’s a trial from the reviewe where it’s unclear whether the difference in VAS is clinically significant (\< 10): <https://cdnsciencepub.com/doi/10.1139/apnm-2016-0390>
+- Here’s a trial from the reviewe where it’s unclear whether the difference in VAS is clinically significant (\< 10): <https://cdnsciencepub.com/doi/10.1139/apnm-2016-0390>
 
-    -   Again, no assessment of baseline protein intake nor were the treatment and control protein matched. So………..we move on.
+  - Again, no assessment of baseline protein intake nor were the treatment and control protein matched. So………..we move on.
 
 [Effects of Oral Collagen on Skin Aging Parameters](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10180699/)
 
--   This meta analysis seems to be the most commonly cited one for the benefits of oral collagen on skin aging outcomes. They meta analyzed 26 RCTs with 1721 patients for a variety of skin related outcomes, like Trans Epidermal Water Loss (TEWL), elasticity, hydration, wrinkles, dermal density, and many more.
+- This meta analysis seems to be the most commonly cited one for the benefits of oral collagen on skin aging outcomes. They meta analyzed 26 RCTs with 1721 patients for a variety of skin related outcomes, like Trans Epidermal Water Loss (TEWL), elasticity, hydration, wrinkles, dermal density, and many more.
 
--   Unlike the previous meta before, they did many more of the basic minimum things right compared to the metas I've cited earlier in this review. But there are still many basic errors to highlight here....
+- Unlike the previous meta before, they did many more of the basic minimum things right compared to the metas I've cited earlier in this review. But there are still many basic errors to highlight here....
 
--   This is yet another meta analysis that has forest plots using SMD improperly. Though they did have a meta analyst statistician specialist on this meta, it tends to be the researchers' faults for being lazy and not doing the unit coversions when appropriate such that Mean Difference can be used.
+- This is yet another meta analysis that has forest plots using SMD improperly. Though they did have a meta analyst statistician specialist on this meta, it tends to be the researchers' faults for being lazy and not doing the unit coversions when appropriate such that Mean Difference can be used.
 
--   The forest plots at least do a good job of separating time points and other relevant categorizations into somewhat appropriate subgroup analyses. (I can't believe I have to offer such a basic point as legitimate praise)
+- The forest plots at least do a good job of separating time points and other relevant categorizations into somewhat appropriate subgroup analyses. (I can't believe I have to offer such a basic point as legitimate praise)
 
--   Important to note that this meta was situated on trials that focused mainly in older woman between 35 - 60 years of age.
+- Important to note that this meta was situated on trials that focused mainly in older woman between 35 - 60 years of age.
 
--   On the forest plot’s face value, it seems collagen is pretty consistently positively associated with most skin aging metrics here. That said when the metric is SMD it’s hard to interpret what the outcome even means. It gets worse….
+- On the forest plot’s face value, it seems collagen is pretty consistently positively associated with most skin aging metrics here. That said when the metric is SMD it’s hard to interpret what the outcome even means. It gets worse….
 
--   ![](images/collagen_skin_meta_study_chars.png)
+- ![](images/collagen_skin_meta_study_chars.png)
 
-    -   So many heterogeneous interventions with respect to dose and type of collagen. This further estranges how the SMD could be interpreted, and is a red flag.
+  - So many heterogeneous interventions with respect to dose and type of collagen. This further estranges how the SMD could be interpreted, and is a red flag.
 
--   This is also an example from one of the trials:
+- This is also an example from one of the trials:
 
--   ![](images/skin_meta_study_intervention_contents_example.png)
+- ![](images/skin_meta_study_intervention_contents_example.png)
 
-    -   On top of the standard criticism of not matching for protein in the placebo nor having any evaluation of baseline dietary protein intake…….The intervention isn’t even just collagen ALONE but a host of different things. How can we know the unique total protein independent content effect of collagen when you have all these other things?
+  - On top of the standard criticism of not matching for protein in the placebo nor having any evaluation of baseline dietary protein intake…….The intervention isn’t even just collagen ALONE but a host of different things. How can we know the unique total protein independent content effect of collagen when you have all these other things?
 
--   Yet another [study](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8707759/) from this meta that didn’t protein match in the placebo nor give baseline protein intakes. They also didn’t use ANCOVA, or change scores even to analyze. Plus significance testing variables at baseline…..noobs ![](images/skin_meta_study_materials_methods.png)
+- Yet another [study](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8707759/) from this meta that didn’t protein match in the placebo nor give baseline protein intakes. They also didn’t use ANCOVA, or change scores even to analyze. Plus significance testing variables at baseline…..noobs ![](images/skin_meta_study_materials_methods.png)
 
--   ![](images/skin_meta_study_materials_methods_part_2.png)
+- ![](images/skin_meta_study_materials_methods_part_2.png)
 
-    -   This meta keeps continuing tradition from the other top level reviews with the inclusion [of a trial](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8176521/) that didn’t use a protein controlled placebo or assessed protein intake at baseline. Which is sad because this trial did a better job of explaining their randomization protocols and power analysis better than most!! (only thing missing was explaining their minimum effect size clearly)
+  - This meta keeps continuing tradition from the other top level reviews with the inclusion [of a trial](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8176521/) that didn’t use a protein controlled placebo or assessed protein intake at baseline. Which is sad because this trial did a better job of explaining their randomization protocols and power analysis better than most!! (only thing missing was explaining their minimum effect size clearly)
 
--   They did do subgroup analyses for the source of the collagen (what animal) and for supplementation length and different outcomes….but it’s hard to make super robust conclusions here. Especially given their lack of accounting for protein intake and placebo protein control. But if you had to make me flip a coin, I might lean slightly in favor of collagen being beneficial for skin aging markers. But barely so.
+- They did do subgroup analyses for the source of the collagen (what animal) and for supplementation length and different outcomes….but it’s hard to make super robust conclusions here. Especially given their lack of accounting for protein intake and placebo protein control. But if you had to make me flip a coin, I might lean slightly in favor of collagen being beneficial for skin aging markers. But barely so.
 
 Overall if there’s a possible benefit to be had from collagen, the strongest evidence is in skin it seems. But there are still some fundamental issues with this meta that I've highlighted above that greatly diminish my confidence in the results for skin. I also think it's responsible for me to admit that I'm not as equipped to evaluate inclusion criteria in these studies, as well as knowing what clinical significance is for a lot of these metrics. I’ll do best consulting a researcher that is more familiar with skin, and update this section.
 
@@ -140,61 +140,61 @@ Overall if there’s a possible benefit to be had from collagen, the strongest e
 
 [Whey protein vs leucine matched collagen protein RCT](https://journals.humankinetics.com/view/journals/ijsnem/32/3/article-p133.xml)
 
--   This is a paper from the above muscle health meta, but SciHub doesn’t have access unfortunately :(. If I’m to believe just their results without looking at the methods then at least for muscle size whey protein does better than leucine matched collagen. Though I’m sure I’d have problems with this trial if I actually read it 😅
+- This is a paper from the above muscle health meta, but SciHub doesn’t have access unfortunately :(. If I’m to believe just their results without looking at the methods then at least for muscle size whey protein does better than leucine matched collagen. Though I’m sure I’d have problems with this trial if I actually read it 😅
 
 [Skin Health + Elasticity with a (collagen + hyaluronic acid +other molecules) supplement l](https://www.semanticscholar.org/paper/03d97f8de417e402f6ab17d1d3546dae74462aae)
 
--   120 participants randomized between each group, randomization method most likely simple given the website tool cited even though they said they randomized the patients "on the basis of the following characteristics: age, sex, BMI, ethnic background (mainly Caucasian),smoking habits, alcohol intake, nutritional level, and skin type assessed using Fitzpatrick scale". Which… would imply stratified sampling???? But the randomization website tool they used didn't allow for stratified sampling lol this is a red flag for the competence of these researchers
+- 120 participants randomized between each group, randomization method most likely simple given the website tool cited even though they said they randomized the patients "on the basis of the following characteristics: age, sex, BMI, ethnic background (mainly Caucasian),smoking habits, alcohol intake, nutritional level, and skin type assessed using Fitzpatrick scale". Which… would imply stratified sampling???? But the randomization website tool they used didn't allow for stratified sampling lol this is a red flag for the competence of these researchers
 
--   Everyone was blinded till end of study
+- Everyone was blinded till end of study
 
--   Not clear they powered for their what was most likely post-hoc subgroup comparisons of older adults for joints. they took like 18 out of 34 people in the older age group who scored high on a joint pain assessment and looked at their outcomes. Common mistake here
+- Not clear they powered for their what was most likely post-hoc subgroup comparisons of older adults for joints. they took like 18 out of 34 people in the older age group who scored high on a joint pain assessment and looked at their outcomes. Common mistake here
 
--   No assessment for protein intake at baseline nor a protein matched placebo\
-    ye bhagavan why do I even bother 
+- No assessment for protein intake at baseline nor a protein matched placebo\
+  ye bhagavan why do I even bother 
 
 [Effect of the Novel Low Molecular Weight Hydrolyzed Chicken Sternal Cartilage Extract, BioCell Collagen, on Improving Osteoarthritis-Related Symptoms: A Randomized,Double-Blind,Placebo-Controlled Trial ](https://pubs.acs.org/doi/10.1021/jf205295u)
 
--   Literally nothing on power analysis (big big red flag)
+- Literally nothing on power analysis (big big red flag)
 
--   No assessment of baseline protein intake, AGAIN. It’s like they’re all trying to prove me right with how incompetent they are. 
+- No assessment of baseline protein intake, AGAIN. It’s like they’re all trying to prove me right with how incompetent they are. 
 
--   Same bullshit that didn't assess collagen by itself but with Hyaluronic Acid and Chondroitin in conjunction compared to a placebo with nothing in it (not protein matched)
+- Same bullshit that didn't assess collagen by itself but with Hyaluronic Acid and Chondroitin in conjunction compared to a placebo with nothing in it (not protein matched)
 
--   Let’s move on this trial is a waste of my time and headspace already there’s nothing of value here
+- Let’s move on this trial is a waste of my time and headspace already there’s nothing of value here
 
 [This Ecuadorian study may be best so far because they measured a proxy for protein intake and included this in the analysis in some form.](https://www.tandfonline.com/doi/full/10.1080/09637480802498820)
 
--   Proper description of some aspects of their power analysis (\*victory dance\*)
+- Proper description of some aspects of their power analysis (\*victory dance\*)
 
--   Some aspects of randomization described (\*victory dance\*)
+- Some aspects of randomization described (\*victory dance\*)
 
--   Higher sample size than others which is always nice
+- Higher sample size than others which is always nice
 
--   They used change scores instead of using the standard ANCOVA and adjusting for baseline, which is generally the best statistical approach for this (so get dinged *slightly* some points for that)
+- They used change scores instead of using the standard ANCOVA and adjusting for baseline, which is generally the best statistical approach for this (so get dinged *slightly* some points for that)
 
--   Did a subgroup for high meat intake to account for effects in people with higher dietary collagen (over 1549 grams of meat per week versus under 1549 grams of meat per week, which if we assume is lean ground beef 1549 grams averaged over the week amounts to around \~55g protein per day and somewhere between 5-20g collagen per day)
+- Did a subgroup for high meat intake to account for effects in people with higher dietary collagen (over 1549 grams of meat per week versus under 1549 grams of meat per week, which if we assume is lean ground beef 1549 grams averaged over the week amounts to around \~55g protein per day and somewhere between 5-20g collagen per day)
 
--   Why do these people keep dichotomizing continuous variables on the median I beg you clinicians please stop dichotomizing continuous variables in your research you're throwing valuable information and variance away for no good reason. There are ways to make use of the information kept when it remains continuous so that it remains informative!!!
+- Why do these people keep dichotomizing continuous variables on the median I beg you clinicians please stop dichotomizing continuous variables in your research you're throwing valuable information and variance away for no good reason. There are ways to make use of the information kept when it remains continuous so that it remains informative!!!
 
--   The higher meat intake group is supposed to measure dietary collagen intake and how much that contributes to the outcome, but that will also track with total protein intake for obvious reasons 
+- The higher meat intake group is supposed to measure dietary collagen intake and how much that contributes to the outcome, but that will also track with total protein intake for obvious reasons 
 
--   If this is the best study I've found I don't have much faith in humanity anymore
+- If this is the best study I've found I don't have much faith in humanity anymore
 
--   Is the following difference for VAS even clinically significant? Look how attenuated the difference is with the higher meat group
+- Is the following difference for VAS even clinically significant? Look how attenuated the difference is with the higher meat group
 
 ![](images/meat_intake_dichot_study_outcomes.png)
 
 [Another Chinese study looking at collagen hydrosalate](https://www.researchgate.net/profile/Janne-Prawitt/publication/285117930_Collagen_peptides_improve_knee_osteoarthritis_in_elderly_women_A_6-month_randomized_double-blind_placebo-controlled_study/links/57cd329d08ae3ac722b49e0c/Collagen-peptides-improve-knee-osteoarthritis-in-elderly-women-A-6-month-randomized-double-blind-placebo-controlled-study.pdf?origin=publication_detail&_tp=eyJjb250ZXh0Ijp7ImZpcnN0UGFnZSI6InB1YmxpY2F0aW9uIiwicGFnZSI6InB1YmxpY2F0aW9uRG93bmxvYWQiLCJwcmV2aW91c1BhZ2UiOiJwdWJsaWNhdGlvbiJ9fQ)
 
--   Power Analysis consists of this sentence:\
-    "This effect size assures, at a significance level of a=0.05, a power of 90% for WOMAC score, and of more than 80% for Lysholm score". Without sharing what “this effect size” meant. 
+- Power Analysis consists of this sentence:\
+  "This effect size assures, at a significance level of a=0.05, a power of 90% for WOMAC score, and of more than 80% for Lysholm score". Without sharing what “this effect size” meant. 
 
-    -   Who’s the genius that came up with this masterful phrasing that makes up the power analysis????? (I hope the sarcasm is dripping through) 
+  - Who’s the genius that came up with this masterful phrasing that makes up the power analysis????? (I hope the sarcasm is dripping through) 
 
-    -   Seriously again these researchers are a joke and deserve to be publicly stoned (obviously I’m kidding don’t report me)
+  - Seriously again these researchers are a joke and deserve to be publicly stoned (obviously I’m kidding don’t report me)
 
--   Once again.....didn’t assess baseline protein intake nor is the placebo protein matched. Another completely fatal flaw.\
+- Once again.....didn’t assess baseline protein intake nor is the placebo protein matched. Another completely fatal flaw.\
 
 # My Final Conclusions on the Topic
 
